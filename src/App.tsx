@@ -10,7 +10,7 @@ export default function App() {
     {
       id: "1",
       title: "Task 1",
-      description: "This is the first task",
+      description: "Description for Task 1",
       status: "pending",
       priority: "medium",
       dueDate: "2023-12-31",
@@ -18,7 +18,7 @@ export default function App() {
     {
       id: "2",
       title: "Task 2",
-      description: "This is the second task",
+      description: "Description for Task 2",
       status: "in-progress",
       priority: "high",
       dueDate: "2023-11-30",
@@ -26,7 +26,7 @@ export default function App() {
     {
       id: "3",
       title: "Task 3",
-      description: "This is the third task",
+      description: "Description for Task 3",
       status: "completed",
       priority: "low",
       dueDate: "2023-10-15",
@@ -59,7 +59,7 @@ export default function App() {
   });
 
   return (
-    <div>
+    <div className="app">
       <h1>Task Manager</h1>
       <TaskFilter onFilterChange={setFilters} />
       <TaskList

@@ -10,7 +10,7 @@ export default function TaskItem({
     <li className={`task-item ${task.status} ${task.priority}`}>
       <h3>{task.title}</h3>
       <p>{task.description}</p>
-      <p>Priority: {task.priority}</p>
+      <p className="priority">Priority: {task.priority}</p>
       <p>Due Date: {task.dueDate}</p>
       <button onClick={() => onStatusChange(task.id, "pending")}>
         Pending
