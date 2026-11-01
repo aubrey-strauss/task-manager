@@ -1,10 +1,11 @@
-\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\import { useState } from "react";
+import { useState } from "react";
 import type { TaskFilterProps } from "../../types";
 import type { TaskStatus } from "../../types";
 
 // TaskFilter shows the status and priority dropdowns, remembers what’s picked,
 // and sends both choices up to the parent with onFilterChange
 export default function TaskFilter({ onFilterChange }: TaskFilterProps) {
+  // each dropdown remembers its own choice; an empty string means All is picked
   const [status, setStatus] = useState("");
   const [priority, setPriority] = useState("");
 
@@ -38,6 +39,7 @@ export default function TaskFilter({ onFilterChange }: TaskFilterProps) {
         Priority:
         <select
           value={priority}
+          //Same idea as status: send the new priority plus the current status, so neither filter gets lost
           onChange={(e) => {
             setPriority(e.target.value);
             onFilterChange({
