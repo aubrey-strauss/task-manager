@@ -7,7 +7,7 @@ export default function TaskItem({
   onDelete,
 }: TaskItemProps) {
   return (
-    <li>
+    <li className={`task-item ${task.status} ${task.priority}`}>
       <h3>{task.title}</h3>
       <p>{task.description}</p>
       <p>Priority: {task.priority}</p>

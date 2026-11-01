@@ -10,7 +10,7 @@ export default function TaskFilter({ onFilterChange }: TaskFilterProps) {
   const [priority, setPriority] = useState("");
 
   return (
-    <div>
+    <div className="task-filter">
       <label>
         Status:
         <select
